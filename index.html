@@ -1,0 +1,53 @@
+<!--
+File: index.html
+GUI Assignment: Updating our HW3 so that it can utilize the JQuery Validation Plugin
+Danny Nguyen, UMass Lowell Computer Science, Danny_nguyen2@student.uml.edu
+Copyright (c) 2023 by Danny. All rights reserved. May be freely copied or 
+excerpted for educational purposes with credit to the author. 
+updated by DN on November 28, 2023 at 4:50 pm.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Dynamic Multiplication Table Generator</title>
+</head>
+<body>
+	<h1>Dynamic Multiplication Table Generator</h1>
+    <p>Please enter table ranges:</p>
+    <div id="errorMessage" class="error-message"></div>
+	<form id="multiplicationForm">
+        <div class="form-box">
+            <label for="C1">Minimum Column Value:</label>
+            <input type="number" id="C1" name="C1" min="-50" max="50" required>
+        </div>
+        
+        <div class="form-box">
+            <label for="C2">Maximum Column Value:</label>
+            <input type="number" id="C2" name="C2" min="-50" max="50" required>
+        </div>
+        
+        <div class="form-box">
+            <label for="R1">Minimum Row Value:</label>
+            <input type="number" id="R1" name="R1" min="-50" max="50" required>
+        </div>
+        
+        <div class="form-box">
+            <label for="R2">Maximum Row Value:</label>
+            <input type="number" id="R2" name="R2" min="-50" max="50" required>
+        </div>
+        
+        <button type="submit">Generate Table</button>
+    </form>
+	<h2 id="tableName"></h2>
+    <div id="tableContainer"></div>
+	<!-- Inclusion of the JQuery Validation Plugin -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="lib/jquery.validate.js"></script>
+    <script src="js/jscript.js"></script>
+</body>
+</html>
